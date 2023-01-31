@@ -16,6 +16,7 @@ workers = {{ openstack_service_workers }}
 auth_url = {{ keystone_admin_url }}
 service_username = {{ senlin_keystone_user }}
 service_password = {{ senlin_keystone_password }}
+cafile = {{ openstack_cacert }}
 service_project_name = service
 service_user_domain = default
 service_project_domain = default
