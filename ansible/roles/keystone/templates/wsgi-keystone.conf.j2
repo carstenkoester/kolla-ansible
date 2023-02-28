@@ -67,6 +67,9 @@ LogLevel info
 {% if keystone_federation_oidc_jwks_uri | length > 0 %}
     OIDCOAuthVerifyJwksUri {{ keystone_federation_oidc_jwks_uri }}
 {% endif %}
+{% if keystone_federation_oidc_outgoing_proxy | length > 0 %}
+    OIDCOutgoingProxy {{ keystone_federation_oidc_outgoing_proxy }}
+{% endif %}
 {% if keystone_federation_openid_certificate_key_ids | length > 0 %}
     OIDCOAuthVerifyCertFiles {{ keystone_federation_openid_certificate_key_ids | join(" ") }}
 {% endif %}

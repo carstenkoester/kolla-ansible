@@ -102,6 +102,16 @@ used by OpenStack command line client. Example config shown below:
 
     keystone_federation_oidc_jwks_uri: "https://<AUTH PROVIDER>/<ID>/discovery/v2.0/keys"
 
+If you need to use a proxy to reach the JWKS URL (for example, because your
+OpenStack environment is behind a corporate firewall requiring the use of a
+proxy for public internet access), you can specify this using the
+`keystone_federation_oidc_outgoing_proxy` variable:
+
+.. code-block:: yaml
+
+    keystone_federation_oidc_outgoing_proxy: "https://<PROXY FQDN>:<PROXY PORT>/"
+
+
 Identity providers configurations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
